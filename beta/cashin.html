@@ -1229,7 +1229,17 @@ function applyIncoming(d){
   if(!loaded||(s!==lastSaved&&!dirty&&!saving)){
     var o=JSON.parse(s);rows=o.rows;labels=o.labels;totals=o.totals;owners=o.owners||{};lastSaved=s;loaded=true;setSave('ok');
     var mig=normalize(rows);render();if(mig)scheduleSave();
+    if(pendingGoto){var g0=pendingGoto;pendingGoto=null;gotoPj(g0)}
   }
+}
+// V146.1 : le site demande d'afficher les jalons d'un PJ (bouton « Ouvrir dans Cash in » de la fiche)
+var pendingGoto=null;
+function gotoPj(pj){
+  if(!loaded){pendingGoto=pj;return}
+  var k=String(pj||'').trim();if(!k)return;
+  tab='jalons';query=k;filterStatus='all';$('#q').value=k;
+  rows.forEach(function(r){if(String(r.pj).toUpperCase().indexOf(k.toUpperCase())===0)collapsed[r.pj]=false});
+  renderTab();
 }
 function applyTheme(m){
   var root=document.documentElement;
@@ -1257,6 +1267,7 @@ function startBridge(){
     var m=e.data;if(!m||m.src!=='cashin-host')return;
     if(m.type==='state')applyIncoming(m.exists?m.data:null);
     else if(m.type==='theme')applyTheme(m);
+    else if(m.type==='goto')gotoPj(m.pj);
     else if(m.type==='ack'&&pend[m.id]){var p=pend[m.id];delete pend[m.id];if(m.ok)p.res();else p.rej(new Error(m.error||'refus'))}
     else if(m.type==='error'){loaded=true;setSave('error');render()}
   });
