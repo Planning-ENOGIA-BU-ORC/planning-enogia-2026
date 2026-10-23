@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/planning-enogia-2026/beta/static/css/main.acfd4977.css",
-    "main.js": "/planning-enogia-2026/beta/static/js/main.f4852329.js",
+    "main.css": "/planning-enogia-2026/beta/static/css/main.6f1d4adb.css",
+    "main.js": "/planning-enogia-2026/beta/static/js/main.f9bde14b.js",
     "index.html": "/planning-enogia-2026/beta/index.html",
-    "main.acfd4977.css.map": "/planning-enogia-2026/beta/static/css/main.acfd4977.css.map",
-    "main.f4852329.js.map": "/planning-enogia-2026/beta/static/js/main.f4852329.js.map"
+    "main.6f1d4adb.css.map": "/planning-enogia-2026/beta/static/css/main.6f1d4adb.css.map",
+    "main.f9bde14b.js.map": "/planning-enogia-2026/beta/static/js/main.f9bde14b.js.map"
   },
   "entrypoints": [
-    "static/css/main.acfd4977.css",
-    "static/js/main.f4852329.js"
+    "static/css/main.6f1d4adb.css",
+    "static/js/main.f9bde14b.js"
   ]
 }
