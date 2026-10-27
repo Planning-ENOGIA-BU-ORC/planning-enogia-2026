@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/planning-enogia-2026/beta/static/css/main.d3e77c6b.css",
-    "main.js": "/planning-enogia-2026/beta/static/js/main.18c6eced.js",
+    "main.css": "/planning-enogia-2026/beta/static/css/main.95029b08.css",
+    "main.js": "/planning-enogia-2026/beta/static/js/main.fdfd4ac1.js",
     "index.html": "/planning-enogia-2026/beta/index.html"
   },
   "entrypoints": [
-    "static/css/main.d3e77c6b.css",
-    "static/js/main.18c6eced.js"
+    "static/css/main.95029b08.css",
+    "static/js/main.fdfd4ac1.js"
   ]
 }
